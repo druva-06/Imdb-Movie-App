@@ -1,9 +1,4 @@
 
-let baseUrl = `https://www.omdbapi.com/?s=baby&apikey=77e8057e`
-
-let imdbUrl = `https://www.imdb.com/title/tt0063522/?ref_=hm_top_tt_i_1`
-
-
 let searchBtn = document.getElementsByClassName('search-btn')[0]
 let inputMveEle = document.querySelector('.search-div input')
 let inputApiEle = document.querySelector('.api-div input')
