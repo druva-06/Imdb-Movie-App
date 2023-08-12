@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #242A32;
+}
+
+/* heading */
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header > .heading{
+    position: fixed;
+    color: #242A32;
+    font-size: 64px;
+    font-weight: 700;
+    text-shadow: 0 0 2px #0296E5;
+    padding: 10px 0;
+    z-index: 99;
+    width: 100%;
+    text-align: center;
+    background-color: #242A32;
+}
+
+/* Search Bar */
+
+main > .search{
+    position: fixed;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    gap: 10px;
+    z-index: 99;
+    padding: 20px;
+    background-color: #242A32;
+}
+
+.search > .api-div{
+    display: flex;
+    justify-content: space-between;
+    background: #3A3F47;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
+
+.search > .search-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: #3A3F47;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
+
+.search > .search-div .search-btn{
+    cursor: pointer;
+}
+
+.search input{
+    background-color: #3A3F47;
+    border: none;
+    outline: none;
+    width: 100vw;
+    color: white;
+}
+
+/* Movie Details */
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > .movie-items{
+    width: 80%;
+    position: relative;
+    top: 220px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-items: center;
+    row-gap: 40px;
+    column-gap: 25px;
+}
+
+.movie-items > .card{
+    transition: 0.1s;
+}
+
+.movie-items > .card:hover{
+    transform: scale(1.15);
+}
+
+.movie-items > .card a{
+    text-decoration: none;
+}
+
+.movie-items > .card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card p{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+.no-result{
+    position: absolute;
+    color: #242A32;
+    top: 50%;
+    left: 17%;
+    right: 17%;
+    font-size: 64px;
+    font-weight: 700;
+    text-shadow: 0 0 2px #0296E5;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #242A32;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #0296E5;
+    border-bottom: 10px solid #0296E5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    visibility: hidden;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 700px){
+    main > .movie-items{
+        grid-template-columns: repeat(2,1fr);
+    }
+    header > .heading{
+        font-size: 40px;
+    }
+}
